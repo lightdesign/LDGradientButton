@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C60487916B8C87D00BDD3E5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C69404816B779FC008B3756 /* QuartzCore.framework */; };
+		1C60487A16B8C88100BDD3E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C69401F16B778C7008B3756 /* CoreGraphics.framework */; };
 		1C69401C16B778C7008B3756 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C69401B16B778C7008B3756 /* UIKit.framework */; };
 		1C69401E16B778C7008B3756 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C69401D16B778C7008B3756 /* Foundation.framework */; };
 		1C69402016B778C7008B3756 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C69401F16B778C7008B3756 /* CoreGraphics.framework */; };
@@ -21,7 +23,24 @@
 		1C69404616B779CB008B3756 /* LDGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C69404216B77991008B3756 /* LDGradientButton.m */; };
 		1C69404716B779CD008B3756 /* UIColor+RGBValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C69404416B77991008B3756 /* UIColor+RGBValues.m */; };
 		1C69404A16B77A02008B3756 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C69404816B779FC008B3756 /* QuartzCore.framework */; };
+		1CE33CDE16B8C418004ACF4F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE33CDD16B8C418004ACF4F /* SenTestingKit.framework */; };
+		1CE33CDF16B8C418004ACF4F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C69401B16B778C7008B3756 /* UIKit.framework */; };
+		1CE33CE016B8C418004ACF4F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C69401D16B778C7008B3756 /* Foundation.framework */; };
+		1CE33CE616B8C418004ACF4F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CE33CE416B8C418004ACF4F /* InfoPlist.strings */; };
+		1CE33CF016B8C466004ACF4F /* LDGradientButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE33CEF16B8C466004ACF4F /* LDGradientButtonTests.m */; };
+		1CE33CF116B8C47E004ACF4F /* UIColor+RGBValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C69404416B77991008B3756 /* UIColor+RGBValues.m */; };
+		1CE33CF216B8C480004ACF4F /* LDGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C69404216B77991008B3756 /* LDGradientButton.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1C60487716B8C85900BDD3E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C69400E16B778C7008B3756 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C69401616B778C7008B3756;
+			remoteInfo = LDGradientButtonExample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1C69401716B778C7008B3756 /* LDGradientButtonExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LDGradientButtonExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +64,13 @@
 		1C69404316B77991008B3756 /* UIColor+RGBValues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGBValues.h"; sourceTree = "<group>"; };
 		1C69404416B77991008B3756 /* UIColor+RGBValues.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGBValues.m"; sourceTree = "<group>"; };
 		1C69404816B779FC008B3756 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1CE33CDC16B8C418004ACF4F /* LDGradientButtonTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LDGradientButtonTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CE33CDD16B8C418004ACF4F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		1CE33CE316B8C418004ACF4F /* LDGradientButtonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LDGradientButtonTests-Info.plist"; sourceTree = "<group>"; };
+		1CE33CE516B8C418004ACF4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1CE33CEA16B8C418004ACF4F /* LDGradientButtonTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LDGradientButtonTests-Prefix.pch"; sourceTree = "<group>"; };
+		1CE33CEE16B8C466004ACF4F /* LDGradientButtonTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDGradientButtonTests.h; sourceTree = "<group>"; };
+		1CE33CEF16B8C466004ACF4F /* LDGradientButtonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDGradientButtonTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +85,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1CE33CD816B8C418004ACF4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CE33CDE16B8C418004ACF4F /* SenTestingKit.framework in Frameworks */,
+				1CE33CDF16B8C418004ACF4F /* UIKit.framework in Frameworks */,
+				1CE33CE016B8C418004ACF4F /* Foundation.framework in Frameworks */,
+				1C60487916B8C87D00BDD3E5 /* QuartzCore.framework in Frameworks */,
+				1C60487A16B8C88100BDD3E5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -66,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				1C69402116B778C7008B3756 /* LDGradientButtonExample */,
+				1CE33CE116B8C418004ACF4F /* LDGradientButtonTests */,
 				1C69401A16B778C7008B3756 /* Frameworks */,
 				1C69401816B778C7008B3756 /* Products */,
 			);
@@ -75,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				1C69401716B778C7008B3756 /* LDGradientButtonExample.app */,
+				1CE33CDC16B8C418004ACF4F /* LDGradientButtonTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +126,7 @@
 				1C69401B16B778C7008B3756 /* UIKit.framework */,
 				1C69401D16B778C7008B3756 /* Foundation.framework */,
 				1C69401F16B778C7008B3756 /* CoreGraphics.framework */,
+				1CE33CDD16B8C418004ACF4F /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,6 +170,26 @@
 			name = LDGradientButton;
 			sourceTree = "<group>";
 		};
+		1CE33CE116B8C418004ACF4F /* LDGradientButtonTests */ = {
+			isa = PBXGroup;
+			children = (
+				1CE33CEE16B8C466004ACF4F /* LDGradientButtonTests.h */,
+				1CE33CEF16B8C466004ACF4F /* LDGradientButtonTests.m */,
+				1CE33CE216B8C418004ACF4F /* Supporting Files */,
+			);
+			path = LDGradientButtonTests;
+			sourceTree = "<group>";
+		};
+		1CE33CE216B8C418004ACF4F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CE33CE316B8C418004ACF4F /* LDGradientButtonTests-Info.plist */,
+				1CE33CE416B8C418004ACF4F /* InfoPlist.strings */,
+				1CE33CEA16B8C418004ACF4F /* LDGradientButtonTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,6 +209,25 @@
 			productName = LDGradientButtonExample;
 			productReference = 1C69401716B778C7008B3756 /* LDGradientButtonExample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1CE33CDB16B8C418004ACF4F /* LDGradientButtonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CE33CED16B8C418004ACF4F /* Build configuration list for PBXNativeTarget "LDGradientButtonTests" */;
+			buildPhases = (
+				1CE33CD716B8C418004ACF4F /* Sources */,
+				1CE33CD816B8C418004ACF4F /* Frameworks */,
+				1CE33CD916B8C418004ACF4F /* Resources */,
+				1CE33CDA16B8C418004ACF4F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C60487816B8C85900BDD3E5 /* PBXTargetDependency */,
+			);
+			name = LDGradientButtonTests;
+			productName = LDGradientButtonTests;
+			productReference = 1CE33CDC16B8C418004ACF4F /* LDGradientButtonTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -172,6 +252,7 @@
 			projectRoot = "";
 			targets = (
 				1C69401616B778C7008B3756 /* LDGradientButtonExample */,
+				1CE33CDB16B8C418004ACF4F /* LDGradientButtonTests */,
 			);
 		};
 /* End PBXProject section */
@@ -189,7 +270,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1CE33CD916B8C418004ACF4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CE33CE616B8C418004ACF4F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CE33CDA16B8C418004ACF4F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1C69401316B778C7008B3756 /* Sources */ = {
@@ -204,7 +309,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1CE33CD716B8C418004ACF4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CE33CF016B8C466004ACF4F /* LDGradientButtonTests.m in Sources */,
+				1CE33CF116B8C47E004ACF4F /* UIColor+RGBValues.m in Sources */,
+				1CE33CF216B8C480004ACF4F /* LDGradientButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1C60487816B8C85900BDD3E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C69401616B778C7008B3756 /* LDGradientButtonExample */;
+			targetProxy = 1C60487716B8C85900BDD3E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1C69402416B778C7008B3756 /* InfoPlist.strings */ = {
@@ -221,6 +344,14 @@
 				1C69403416B778C7008B3756 /* en */,
 			);
 			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		1CE33CE416B8C418004ACF4F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CE33CE516B8C418004ACF4F /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -281,6 +412,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LDGradientButtonExample/LDGradientButtonExample-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "LDGradientButtonExample/LDGradientButtonExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -292,9 +424,52 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LDGradientButtonExample/LDGradientButtonExample-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				INFOPLIST_FILE = "LDGradientButtonExample/LDGradientButtonExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1CE33CEB16B8C418004ACF4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LDGradientButtonExample.app/LDGradientButtonExample";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LDGradientButtonTests/LDGradientButtonTests-Prefix.pch";
+				INFOPLIST_FILE = "LDGradientButtonTests/LDGradientButtonTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		1CE33CEC16B8C418004ACF4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LDGradientButtonExample.app/LDGradientButtonExample";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LDGradientButtonTests/LDGradientButtonTests-Prefix.pch";
+				INFOPLIST_FILE = "LDGradientButtonTests/LDGradientButtonTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -317,6 +492,16 @@
 				1C69403D16B778C7008B3756 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CE33CED16B8C418004ACF4F /* Build configuration list for PBXNativeTarget "LDGradientButtonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CE33CEB16B8C418004ACF4F /* Debug */,
+				1CE33CEC16B8C418004ACF4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
