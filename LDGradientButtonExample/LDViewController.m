@@ -28,6 +28,10 @@
     [self sliderValuesChanged];
 }
 
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 - (IBAction)redSliderChanged:(id)sender {
     [self sliderValuesChanged];
 }

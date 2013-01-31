@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [[LDGradientButton appearance] setTintColor:[UIColor orangeColor]];
+    [[LDGradientButton appearance] setTintColor:[UIColor colorWithRed:0.00f green:0.50f blue:0.00f alpha:1.00f]];
     return YES;
 }
 							

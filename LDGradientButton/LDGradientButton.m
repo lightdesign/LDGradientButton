@@ -50,7 +50,7 @@
 - (void)setupButton {
     self.normalShineColor = [UIColor colorWithWhite:1.0 alpha:1.0];
     self.highlightShineColor = [UIColor colorWithWhite:0.6 alpha:1.0];
-    self.tintColor = [[[self class] appearance] tintColor] ? [[[self class] appearance] tintColor] : [UIColor colorWithRed:0.00f green:0.50f blue:0.00f alpha:1.00f];
+    self.tintColor = [[[self class] appearance] tintColor] ? [[[self class] appearance] tintColor] : [UIColor grayColor];
     self.highlightTextColor = self.normalTextColor;
     [self drawButton];
     [self drawHighlightBackgroundLayer];
