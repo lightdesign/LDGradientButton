@@ -20,16 +20,16 @@
 		1C69403216B778C7008B3756 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C69403116B778C7008B3756 /* Default-568h@2x.png */; };
 		1C69403516B778C7008B3756 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C69403316B778C7008B3756 /* MainStoryboard.storyboard */; };
 		1C69403816B778C7008B3756 /* LDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C69403716B778C7008B3756 /* LDViewController.m */; };
-		1C69404616B779CB008B3756 /* LDGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C69404216B77991008B3756 /* LDGradientButton.m */; };
-		1C69404716B779CD008B3756 /* UIColor+RGBValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C69404416B77991008B3756 /* UIColor+RGBValues.m */; };
 		1C69404A16B77A02008B3756 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C69404816B779FC008B3756 /* QuartzCore.framework */; };
+		1CDC91F416BA0EED006DF922 /* LDGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDC91F116BA0EED006DF922 /* LDGradientButton.m */; };
+		1CDC91F516BA0EED006DF922 /* UIColor+RGBValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDC91F316BA0EED006DF922 /* UIColor+RGBValues.m */; };
+		1CDC91F616BA0F04006DF922 /* LDGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDC91F116BA0EED006DF922 /* LDGradientButton.m */; };
+		1CDC91F716BA0F06006DF922 /* UIColor+RGBValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDC91F316BA0EED006DF922 /* UIColor+RGBValues.m */; };
 		1CE33CDE16B8C418004ACF4F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE33CDD16B8C418004ACF4F /* SenTestingKit.framework */; };
 		1CE33CDF16B8C418004ACF4F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C69401B16B778C7008B3756 /* UIKit.framework */; };
 		1CE33CE016B8C418004ACF4F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C69401D16B778C7008B3756 /* Foundation.framework */; };
 		1CE33CE616B8C418004ACF4F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CE33CE416B8C418004ACF4F /* InfoPlist.strings */; };
 		1CE33CF016B8C466004ACF4F /* LDGradientButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE33CEF16B8C466004ACF4F /* LDGradientButtonTests.m */; };
-		1CE33CF116B8C47E004ACF4F /* UIColor+RGBValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C69404416B77991008B3756 /* UIColor+RGBValues.m */; };
-		1CE33CF216B8C480004ACF4F /* LDGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C69404216B77991008B3756 /* LDGradientButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,11 +59,11 @@
 		1C69403416B778C7008B3756 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		1C69403616B778C7008B3756 /* LDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDViewController.h; sourceTree = "<group>"; };
 		1C69403716B778C7008B3756 /* LDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDViewController.m; sourceTree = "<group>"; };
-		1C69404116B77991008B3756 /* LDGradientButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDGradientButton.h; sourceTree = "<group>"; };
-		1C69404216B77991008B3756 /* LDGradientButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDGradientButton.m; sourceTree = "<group>"; };
-		1C69404316B77991008B3756 /* UIColor+RGBValues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGBValues.h"; sourceTree = "<group>"; };
-		1C69404416B77991008B3756 /* UIColor+RGBValues.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGBValues.m"; sourceTree = "<group>"; };
 		1C69404816B779FC008B3756 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1CDC91F016BA0EED006DF922 /* LDGradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LDGradientButton.h; path = LDGradientButton/LDGradientButton.h; sourceTree = SOURCE_ROOT; };
+		1CDC91F116BA0EED006DF922 /* LDGradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LDGradientButton.m; path = LDGradientButton/LDGradientButton.m; sourceTree = SOURCE_ROOT; };
+		1CDC91F216BA0EED006DF922 /* UIColor+RGBValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+RGBValues.h"; path = "LDGradientButton/UIColor+RGBValues.h"; sourceTree = SOURCE_ROOT; };
+		1CDC91F316BA0EED006DF922 /* UIColor+RGBValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+RGBValues.m"; path = "LDGradientButton/UIColor+RGBValues.m"; sourceTree = SOURCE_ROOT; };
 		1CE33CDC16B8C418004ACF4F /* LDGradientButtonTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LDGradientButtonTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CE33CDD16B8C418004ACF4F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		1CE33CE316B8C418004ACF4F /* LDGradientButtonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LDGradientButtonTests-Info.plist"; sourceTree = "<group>"; };
@@ -162,10 +162,10 @@
 		1C69404516B77995008B3756 /* LDGradientButton */ = {
 			isa = PBXGroup;
 			children = (
-				1C69404116B77991008B3756 /* LDGradientButton.h */,
-				1C69404216B77991008B3756 /* LDGradientButton.m */,
-				1C69404316B77991008B3756 /* UIColor+RGBValues.h */,
-				1C69404416B77991008B3756 /* UIColor+RGBValues.m */,
+				1CDC91F016BA0EED006DF922 /* LDGradientButton.h */,
+				1CDC91F116BA0EED006DF922 /* LDGradientButton.m */,
+				1CDC91F216BA0EED006DF922 /* UIColor+RGBValues.h */,
+				1CDC91F316BA0EED006DF922 /* UIColor+RGBValues.m */,
 			);
 			name = LDGradientButton;
 			sourceTree = "<group>";
@@ -304,8 +304,8 @@
 				1C69402816B778C7008B3756 /* main.m in Sources */,
 				1C69402C16B778C7008B3756 /* LDAppDelegate.m in Sources */,
 				1C69403816B778C7008B3756 /* LDViewController.m in Sources */,
-				1C69404616B779CB008B3756 /* LDGradientButton.m in Sources */,
-				1C69404716B779CD008B3756 /* UIColor+RGBValues.m in Sources */,
+				1CDC91F616BA0F04006DF922 /* LDGradientButton.m in Sources */,
+				1CDC91F716BA0F06006DF922 /* UIColor+RGBValues.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,8 +314,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CE33CF016B8C466004ACF4F /* LDGradientButtonTests.m in Sources */,
-				1CE33CF116B8C47E004ACF4F /* UIColor+RGBValues.m in Sources */,
-				1CE33CF216B8C480004ACF4F /* LDGradientButton.m in Sources */,
+				1CDC91F416BA0EED006DF922 /* LDGradientButton.m in Sources */,
+				1CDC91F516BA0EED006DF922 /* UIColor+RGBValues.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

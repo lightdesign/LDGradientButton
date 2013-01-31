@@ -22,4 +22,6 @@
 @property (nonatomic, strong) UIColor *normalTextColor;
 @property (nonatomic, strong) UIColor *highlightTextColor;
 
++ (id)button;
+
 @end

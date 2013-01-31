@@ -15,4 +15,8 @@
 - (CGFloat)blue;
 - (CGFloat)alpha;
 
+- (UIColor *)darkerColor;
+- (UIColor *)lighterColor;
+- (BOOL)highlightShouldBeDarker;
+
 @end
