@@ -12,14 +12,23 @@
 @interface LDGradientButton()
 @property (nonatomic, strong) CAGradientLayer *normalLayer;
 @property (nonatomic, strong) CAGradientLayer *highlightLayer;
+
+@property (nonatomic, strong) UIColor *normalShineColor;
+@property (nonatomic, strong) UIColor *highlightShineColor;
 @end
 
 @implementation LDGradientButton
 
 @synthesize tintColor=_tintColor;
 
++ (id)button {
+    LDGradientButton *button = [super buttonWithType:UIButtonTypeCustom];
+    [button setupButton];
+    return button;
+}
+
 + (id)buttonWithType:(UIButtonType)buttonType {
-    return [super buttonWithType:UIButtonTypeCustom];
+    return [[self class] button];
 }
 
 - (id)initWithFrame:(CGRect)frame {
@@ -39,6 +48,8 @@
 }
 
 - (void)setupButton {
+    self.normalShineColor = [UIColor colorWithWhite:1.0 alpha:1.0];
+    self.highlightShineColor = [UIColor colorWithWhite:0.6 alpha:1.0];
     self.tintColor = [[[self class] appearance] tintColor] ? [[[self class] appearance] tintColor] : [UIColor colorWithRed:0.00f green:0.50f blue:0.00f alpha:1.00f];
     self.highlightTextColor = self.normalTextColor;
     [self drawButton];
@@ -120,8 +131,10 @@
     if (!_normalLayer) {
         _normalLayer = [CAGradientLayer layer];
         _normalLayer.frame = CGRectInset(self.layer.bounds, -20, -8);
-        UIColor *shineColor = [UIColor colorWithWhite:1.0 alpha:1.0];
-        _normalLayer.colors = @[(id)shineColor.CGColor, (id)self.topColor.CGColor, (id)self.bottomColor.CGColor, (id)shineColor.CGColor];
+        _normalLayer.colors = @[(id)self.normalShineColor.CGColor,
+                                (id)self.topColor.CGColor,
+                                (id)self.bottomColor.CGColor,
+                                (id)self.normalShineColor.CGColor];
         _normalLayer.locations = @[@0.0f, @0.05f, @0.95f, @1.0f];
         _normalLayer.cornerRadius = self.layer.cornerRadius;
         [self.layer insertSublayer:_normalLayer atIndex:0];
@@ -132,11 +145,16 @@
     if (!_highlightLayer) {
         _highlightLayer = [CAGradientLayer layer];
         _highlightLayer.frame = CGRectInset(self.layer.bounds, -20, -8);
-        UIColor *shineColor = [UIColor colorWithWhite:0.6 alpha:1.0];
         if ([self.tintColor highlightShouldBeDarker]) {
-            _highlightLayer.colors = @[(id)shineColor.CGColor, (id)[self.topColor darkerColor].CGColor, (id)[self.bottomColor darkerColor].CGColor, (id)shineColor.CGColor];
+            _highlightLayer.colors = @[(id)self.highlightShineColor.CGColor,
+                                       (id)[self.topColor darkerColor].CGColor,
+                                       (id)[self.bottomColor darkerColor].CGColor,
+                                       (id)self.highlightShineColor.CGColor];
         } else {
-            _highlightLayer.colors = @[(id)shineColor.CGColor, (id)[self.topColor lighterColor].CGColor, (id)[self.bottomColor lighterColor].CGColor, (id)shineColor.CGColor];
+            _highlightLayer.colors = @[(id)self.highlightShineColor.CGColor,
+                                       (id)[self.topColor lighterColor].CGColor,
+                                       (id)[self.bottomColor lighterColor].CGColor,
+                                       (id)self.highlightShineColor.CGColor];
         }
         _highlightLayer.locations = @[@0.0f, @0.05f, @0.95f, @1.0f];
         _highlightLayer.cornerRadius = self.layer.cornerRadius;
