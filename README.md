@@ -10,7 +10,9 @@ LDGradientButton is meant to be a replacement for the Apple stock UIButton. It c
 Download the zip of the project and put the "LDGradientButton" folder in your project. Then simply import "LDGradientButton.h" in the file(s) you would like to use it in.
 
 ### CocoaPods
-Coming soon…
+Add this to your Podfile: ```pod 'LDGradientButton', '>= 0.0.1'```
+
+To learn more about CocoaPods, please visit their [website](http://cocoapods.org).
 
 ## Examples
 
