@@ -79,6 +79,8 @@ LDGradientButton *gradientButton;
     UIColor *darkerColor = [color darkerColor];
     [darkerColor getHue:nil saturation:nil brightness:&darkerBrightness alpha:nil];
     STAssertTrue(darkerBrightness < originalBrightness, @"darker color should lower the brightness");
+    STAssertNotNil([[UIColor whiteColor] darkerColor], @"converting a white color to a darker color should not return nil");
+    STAssertNotNil([[UIColor blackColor] darkerColor], @"converting a black color to a darker color should not return nil");
 }
 
 - (void)testUIColorLighterMethod {
@@ -89,6 +91,8 @@ LDGradientButton *gradientButton;
     UIColor *lighterColor = [color lighterColor];
     [lighterColor getHue:nil saturation:nil brightness:&lighterBrightness alpha:nil];
     STAssertTrue(lighterBrightness > originalBrightness, @"lighter color should increase the brightness");
+    STAssertNotNil([[UIColor whiteColor] lighterColor], @"converting a white color to a darker color should not return nil");
+    STAssertNotNil([[UIColor blackColor] lighterColor], @"converting a black color to a darker color should not return nil");
 }
 
 @end

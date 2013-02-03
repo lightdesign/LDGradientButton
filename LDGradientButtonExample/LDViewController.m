@@ -21,7 +21,7 @@
 @implementation LDViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    [super viewDidLoad];    
     self.redSlider.value = [self.gradientButton.tintColor red];
     self.greenSlider.value = [self.gradientButton.tintColor green];
     self.blueSlider.value = [self.gradientButton.tintColor blue];
