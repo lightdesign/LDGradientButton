@@ -6,9 +6,9 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/rcdilorenzo/LDGradientButton"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "Christian Di Lorenzo" => "rcddeveloper@icloud.com" }
-  s.source       = { :git => "https://github.com/rcdilorenzo/LDGradientButton", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/rcdilorenzo/LDGradientButton.git", :tag => "0.0.1" }
   s.platform     = :ios, '5.0'
-  s.source_files = 'LDGradientButton.{h, m}', 'UIColor+RGBValues.{h,m}'
+  s.source_files = 'LDGradientButton.*', 'UIColor+RGBValues.*'
   s.framework  = 'QuartzCore'
   s.requires_arc = true
 end
