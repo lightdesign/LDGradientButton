@@ -19,8 +19,8 @@
 
 @property (nonatomic, strong) NSString *title;
 
-@property (nonatomic, strong) UIColor *normalTextColor;
-@property (nonatomic, strong) UIColor *highlightTextColor;
+@property (nonatomic, strong) UIColor *normalTextColor UI_APPEARANCE_SELECTOR;
+@property (nonatomic, strong) UIColor *highlightTextColor UI_APPEARANCE_SELECTOR;
 
 + (id)button;
 

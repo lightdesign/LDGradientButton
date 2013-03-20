@@ -20,6 +20,8 @@
 @implementation LDGradientButton
 
 @synthesize tintColor=_tintColor;
+@synthesize normalTextColor=_normalTextColor;
+@synthesize highlightTextColor=_highlightTextColor;
 
 + (id)button {
     LDGradientButton *button = [super buttonWithType:UIButtonTypeCustom];
@@ -68,13 +70,32 @@
 
 - (void)setTintColor:(UIColor *)tintColor {
     _tintColor = tintColor;
-    const CGFloat* components = CGColorGetComponents(self.tintColor.CGColor);
-    /* Calculate whether to use light or dark text color */
-    self.normalTextColor = ((components[0]+components[1]+components[2])/3 >= 0.5) ? [UIColor blackColor] : [UIColor whiteColor];
-    self.highlightTextColor = [UIColor whiteColor];
+    [self normalTextColor];
+    [self highlightTextColor];
     self.topColor = [UIColor colorWithRed:[tintColor red]+0.15 green:[tintColor green]+0.15 blue:[tintColor blue]+0.15 alpha:1.0];
     self.bottomColor = [UIColor colorWithRed:[tintColor red]-0.15 green:[tintColor green]-0.15 blue:[tintColor blue]-0.15 alpha:1.0];
     self.borderColor = self.bottomColor;
+}
+
+- (UIColor *)normalTextColor {
+    if (!_normalTextColor) {
+        const CGFloat* components = CGColorGetComponents(self.tintColor.CGColor);
+        /* Calculate whether to use light or dark text color */
+        UIColor *calculatedColor = ((components[0]+components[1]+components[2])/3 >= 0.5) ? [UIColor blackColor] : [UIColor whiteColor];
+        [self setTitleColor:calculatedColor forState:UIControlStateNormal];
+        return calculatedColor;
+    }
+    [self setTitleColor:_normalTextColor forState:UIControlStateNormal];
+    return _normalTextColor;
+}
+
+- (UIColor *)highlightTextColor {
+    if (!_highlightTextColor) {
+        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+        return [UIColor whiteColor];
+    }
+    [self setTitleColor:_highlightTextColor forState:UIControlStateHighlighted];
+    return _highlightTextColor;
 }
 
 - (void)setNormalTextColor:(UIColor *)normalTextColor {
