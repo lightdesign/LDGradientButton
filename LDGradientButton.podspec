@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LDGradientButton"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Subclassing UIButton to create UI awesomeness."
   s.description  = "LDGradientButton is meant to be a replacement for the Apple stock UIButton. It can easily be created either programmatically or with the Storyboard. It also supports the UIAppearence protocol for setting the tint color."
   s.homepage     = "https://github.com/rcdilorenzo/LDGradientButton"

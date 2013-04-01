@@ -72,8 +72,8 @@
     _tintColor = tintColor;
     [self normalTextColor];
     [self highlightTextColor];
-    self.topColor = [UIColor colorWithRed:[tintColor red]+0.15 green:[tintColor green]+0.15 blue:[tintColor blue]+0.15 alpha:1.0];
-    self.bottomColor = [UIColor colorWithRed:[tintColor red]-0.15 green:[tintColor green]-0.15 blue:[tintColor blue]-0.15 alpha:1.0];
+    self.topColor = [tintColor isClearColor] ? tintColor : [UIColor colorWithRed:[tintColor red]+0.15 green:[tintColor green]+0.15 blue:[tintColor blue]+0.15 alpha:1.0];
+    self.bottomColor = [tintColor isClearColor] ? tintColor : [UIColor colorWithRed:[tintColor red]-0.15 green:[tintColor green]-0.15 blue:[tintColor blue]-0.15 alpha:1.0];
     self.borderColor = self.bottomColor;
 }
 
@@ -149,7 +149,7 @@
 }
 
 - (void)drawBackgroundLayer {
-    if (!_normalLayer) {
+    if (!_normalLayer && ![self.tintColor isClearColor]) {
         _normalLayer = [CAGradientLayer layer];
         _normalLayer.frame = CGRectInset(self.layer.bounds, -20, -8);
         _normalLayer.colors = @[(id)self.normalShineColor.CGColor,
@@ -163,7 +163,7 @@
 }
 
 - (void)drawHighlightBackgroundLayer {
-    if (!_highlightLayer) {
+    if (!_highlightLayer && ![self.tintColor isClearColor]) {
         _highlightLayer = [CAGradientLayer layer];
         _highlightLayer.frame = CGRectInset(self.layer.bounds, -20, -8);
         if ([self.tintColor highlightShouldBeDarker]) {
