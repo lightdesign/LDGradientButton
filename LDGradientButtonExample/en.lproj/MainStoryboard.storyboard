@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FL3-mH-Nzq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FL3-mH-Nzq">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -60,18 +60,32 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="weY-NY-sEv">
+                                <connections>
+                                    <action selector="setClearButton:" destination="2" eventType="valueChanged" id="aef-Kv-2Vc"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enable" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdy-PZ-XQf">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.32023520713399423" green="0.46074707997249875" blue="0.6587611607142857" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="kN2-NG-OFu" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="0Zc-3c-yac"/>
                             <constraint firstItem="kN2-NG-OFu" firstAttribute="trailing" secondItem="2MM-6h-xo3" secondAttribute="trailing" type="default" id="0vt-Xh-hxe"/>
+                            <constraint firstItem="Tdy-PZ-XQf" firstAttribute="centerX" secondItem="weY-NY-sEv" secondAttribute="centerX" type="default" id="1AD-yX-iqQ"/>
                             <constraint firstItem="2MM-6h-xo3" firstAttribute="trailing" secondItem="zUq-OW-Xeu" secondAttribute="trailing" type="default" id="4wX-Sd-GZk"/>
+                            <constraint firstItem="2MM-6h-xo3" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="6Dt-nB-X4N"/>
                             <constraint firstItem="zUq-OW-Xeu" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ACE-PJ-syX"/>
                             <constraint firstItem="b9z-P5-gE0" firstAttribute="centerX" secondItem="uMD-Hw-9L1" secondAttribute="centerX" type="default" id="Ec0-S5-iCx"/>
+                            <constraint firstItem="weY-NY-sEv" firstAttribute="trailing" secondItem="uMD-Hw-9L1" secondAttribute="trailing" type="default" id="Kuq-T9-e9o"/>
                             <constraint firstAttribute="bottom" secondItem="IOQ-qZ-RAH" secondAttribute="bottom" constant="12" id="Luh-hk-83m"/>
                             <constraint firstAttribute="bottom" secondItem="2MM-6h-xo3" secondAttribute="bottom" constant="102" id="NNq-Ba-V44"/>
                             <constraint firstItem="kN2-NG-OFu" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Rkg-EH-UZx"/>
                             <constraint firstItem="2MM-6h-xo3" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="SmU-M1-Y3Z"/>
+                            <constraint firstItem="weY-NY-sEv" firstAttribute="top" secondItem="Tdy-PZ-XQf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="VwA-km-TOc"/>
+                            <constraint firstItem="weY-NY-sEv" firstAttribute="bottom" secondItem="uMD-Hw-9L1" secondAttribute="bottom" type="default" id="cRd-ke-HB7"/>
                             <constraint firstItem="kN2-NG-OFu" firstAttribute="trailing" secondItem="uMD-Hw-9L1" secondAttribute="trailing" type="default" id="dER-w5-Jej"/>
                             <constraint firstAttribute="bottom" secondItem="zUq-OW-Xeu" secondAttribute="bottom" constant="56" id="dXt-Zo-2r8"/>
                             <constraint firstItem="zUq-OW-Xeu" firstAttribute="trailing" secondItem="IOQ-qZ-RAH" secondAttribute="trailing" type="default" id="fsi-NP-Axy"/>
@@ -124,6 +138,7 @@
                 <relationship kind="action" name="blueSliderChanged:"/>
                 <relationship kind="action" name="greenSliderChanged:"/>
                 <relationship kind="action" name="redSliderChanged:"/>
+                <relationship kind="action" name="setClearButton:"/>
                 <relationship kind="outlet" name="blueSlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="gradientButton" candidateClass="LDGradientButton"/>
                 <relationship kind="outlet" name="greenSlider" candidateClass="UISlider"/>

@@ -32,6 +32,15 @@
     return UIInterfaceOrientationMaskPortrait;
 }
 
+- (IBAction)setClearButton:(id)sender {
+    self.gradientButton.userInteractionEnabled = !self.gradientButton.userInteractionEnabled;
+    if (self.gradientButton.userInteractionEnabled) {
+        [self sliderValuesChanged];
+    } else {
+        self.rgbLabel.text = @"Disabled";
+    }
+}
+
 - (IBAction)redSliderChanged:(id)sender {
     [self sliderValuesChanged];
 }
@@ -43,11 +52,13 @@
 }
 
 - (void)sliderValuesChanged {
-    self.gradientButton.tintColor = [UIColor colorWithRed:self.redSlider.value
-                                                    green:self.greenSlider.value
-                                                     blue:self.blueSlider.value
-                                                    alpha:1.0];
-    self.rgbLabel.text = [NSString stringWithFormat:@"R: %.f G: %.f B: %.f", self.redSlider.value*256, self.greenSlider.value*256, self.blueSlider.value*256];
+    if (self.gradientButton.userInteractionEnabled) {
+        self.gradientButton.tintColor = [UIColor colorWithRed:self.redSlider.value
+                                                        green:self.greenSlider.value
+                                                         blue:self.blueSlider.value
+                                                        alpha:1.0];
+        self.rgbLabel.text = [NSString stringWithFormat:@"R: %.f G: %.f B: %.f", self.redSlider.value*256, self.greenSlider.value*256, self.blueSlider.value*256];
+    }
 }
 
 @end

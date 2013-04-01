@@ -68,6 +68,20 @@
     [self setTitle:title forState:UIControlStateNormal];
 }
 
+- (void)setUserInteractionEnabled:(BOOL)userInteractionEnabled {
+    [super setUserInteractionEnabled:userInteractionEnabled];
+    if (userInteractionEnabled) {
+        [self drawHighlightBackgroundLayer];
+        [self drawBackgroundLayer];
+        [self drawButton];
+        
+    } else {
+        self.layer.borderWidth = 0.0f;
+        [_highlightLayer removeFromSuperlayer];
+        [_normalLayer removeFromSuperlayer];
+    }
+}
+
 - (void)setTintColor:(UIColor *)tintColor {
     _tintColor = tintColor;
     [self normalTextColor];
@@ -110,12 +124,12 @@
 
 - (void)setTopColor:(UIColor *)topColor {
     _topColor = topColor;
-    [self refreshLayers];
+    if (_bottomColor && ![_bottomColor isClearColor]) [self refreshLayers];
 }
 
 - (void)setBottomColor:(UIColor *)bottomColor {
     _bottomColor = bottomColor;
-    [self refreshLayers];
+    if (_topColor && ![_topColor isClearColor]) [self refreshLayers];
 }
 
 - (void)setBorderColor:(UIColor *)borderColor {
@@ -124,15 +138,13 @@
 }
 
 - (void)refreshLayers {
-    if (_normalLayer && _highlightLayer) {
-        [_highlightLayer removeFromSuperlayer];
-        _highlightLayer = nil;
-        [self drawHighlightBackgroundLayer];
-        
-        [_normalLayer removeFromSuperlayer];
-        _normalLayer = nil;
-        [self drawBackgroundLayer];
-    }
+    [_highlightLayer removeFromSuperlayer];
+    _highlightLayer = nil;
+    [self drawHighlightBackgroundLayer];
+    
+    [_normalLayer removeFromSuperlayer];
+    _normalLayer = nil;
+    [self drawBackgroundLayer];
 }
 
 - (void)layoutSubviews {
