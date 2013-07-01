@@ -1,3 +1,7 @@
+# Support Notice
+
+Because of recent Apple anouncements that will remove skeumorphism, LDGradientButton will not be supported in iOS 7. As a replacement, I would recommend looking into live blur buttons which seem to be the new way of iOS. Thank you for your interest.
+
 # LDGradientButton
 
 LDGradientButton is meant to be a replacement for the Apple stock UIButton. It can easily be created either programmatically or with the Storyboard. It also supports the UIAppearence protocol for setting the tint color.
