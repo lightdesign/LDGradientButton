@@ -9,6 +9,9 @@
 #import "LDGradientButton.h"
 #import "UIColor+RGBValues.h"
 
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define iOS_7_OR_LATER SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7")
+
 @interface LDGradientButton()
 @property (nonatomic, strong) CAGradientLayer *normalLayer;
 @property (nonatomic, strong) CAGradientLayer *highlightLayer;
@@ -164,32 +167,43 @@
     if (!_normalLayer && ![self.tintColor isClearColor]) {
         _normalLayer = [CAGradientLayer layer];
         _normalLayer.frame = CGRectInset(self.layer.bounds, -20, -8);
-        _normalLayer.colors = @[(id)self.normalShineColor.CGColor,
-                                (id)self.topColor.CGColor,
-                                (id)self.bottomColor.CGColor,
-                                (id)self.normalShineColor.CGColor];
-        _normalLayer.locations = @[@0.0f, @0.05f, @0.95f, @1.0f];
+        if (iOS_7_OR_LATER) {
+            // TODO: Fix nested if statements
+            _normalLayer.colors = @[(id)self.tintColor.CGColor, (id)self.tintColor.CGColor];
+            _normalLayer.locations = @[@0, @1];
+        } else {
+            _normalLayer.colors = @[(id)self.normalShineColor.CGColor,
+                                    (id)self.topColor.CGColor,
+                                    (id)self.bottomColor.CGColor,
+                                    (id)self.normalShineColor.CGColor];
+            _normalLayer.locations = @[@0.0f, @0.05f, @0.95f, @1.0f];
+        }
         _normalLayer.cornerRadius = self.layer.cornerRadius;
         [self.layer insertSublayer:_normalLayer atIndex:0];
     }
 }
 
 - (void)drawHighlightBackgroundLayer {
+    SEL colorAdjustment = @selector(lighterColor);
+    if ([self.tintColor highlightShouldBeDarker]) {
+        colorAdjustment = @selector(darkerColor);
+    }
+    
     if (!_highlightLayer && ![self.tintColor isClearColor]) {
         _highlightLayer = [CAGradientLayer layer];
         _highlightLayer.frame = CGRectInset(self.layer.bounds, -20, -8);
-        if ([self.tintColor highlightShouldBeDarker]) {
-            _highlightLayer.colors = @[(id)self.highlightShineColor.CGColor,
-                                       (id)[self.topColor darkerColor].CGColor,
-                                       (id)[self.bottomColor darkerColor].CGColor,
-                                       (id)self.highlightShineColor.CGColor];
+        if (iOS_7_OR_LATER) {
+            // TODO: Fix nested if statements
+            _highlightLayer.colors = @[(id)((UIColor *)[self.tintColor performSelector:colorAdjustment]).CGColor,
+                                       (id)((UIColor *)[self.tintColor performSelector:colorAdjustment]).CGColor];
+            _highlightLayer.locations = @[@0, @1];
         } else {
             _highlightLayer.colors = @[(id)self.highlightShineColor.CGColor,
-                                       (id)[self.topColor lighterColor].CGColor,
-                                       (id)[self.bottomColor lighterColor].CGColor,
+                                       (id)((UIColor *)[self.topColor performSelector:colorAdjustment]).CGColor,
+                                       (id)((UIColor *)[self.bottomColor performSelector:colorAdjustment]).CGColor,
                                        (id)self.highlightShineColor.CGColor];
+            _highlightLayer.locations = @[@0.0f, @0.05f, @0.95f, @1.0f];
         }
-        _highlightLayer.locations = @[@0.0f, @0.05f, @0.95f, @1.0f];
         _highlightLayer.cornerRadius = self.layer.cornerRadius;
         _highlightLayer.hidden = YES;
         [self.layer insertSublayer:_highlightLayer atIndex:0];
