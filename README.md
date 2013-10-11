@@ -2,11 +2,13 @@
 
 Because of recent Apple anouncements that will remove skeumorphism, LDGradientButton will not be supported in iOS 7. As a replacement, I would recommend looking into live blur buttons which seem to be the new way of iOS. Thank you for your interest.
 
+If you still want to use on iOS 7, the gradients will automatically be converted a solid color with an outline.
+
 # LDGradientButton
 
 LDGradientButton is meant to be a replacement for the Apple stock UIButton. It can easily be created either programmatically or with the Storyboard. It also supports the UIAppearence protocol for setting the tint color.
 
-<img src="https://dl.dropbox.com/u/20180054/Github%20Resources/screenshot1.png" height="50%"/>
+![screenshot](https://dl.dropbox.com/u/20180054/Github%20Resources/screenshot1.png)
 
 ## Installation
 
