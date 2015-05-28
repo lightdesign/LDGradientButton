@@ -184,23 +184,20 @@
 }
 
 - (void)drawHighlightBackgroundLayer {
-    SEL colorAdjustment = @selector(lighterColor);
-    if ([self.tintColor highlightShouldBeDarker]) {
-        colorAdjustment = @selector(darkerColor);
-    }
+    BOOL darkerColorNeeded = [self.tintColor highlightShouldBeDarker];
     
     if (!_highlightLayer && ![self.tintColor isClearColor]) {
         _highlightLayer = [CAGradientLayer layer];
         _highlightLayer.frame = CGRectInset(self.layer.bounds, -20, -8);
+        UIColor *modifiedColor = [self.tintColor highlightShouldBeDarker] ? [self.tintColor darkerColor] : [self.tintColor lighterColor];
         if (iOS_7_OR_LATER) {
             // TODO: Fix nested if statements
-            _highlightLayer.colors = @[(id)((UIColor *)[self.tintColor performSelector:colorAdjustment]).CGColor,
-                                       (id)((UIColor *)[self.tintColor performSelector:colorAdjustment]).CGColor];
+            _highlightLayer.colors = @[(id)modifiedColor.CGColor, (id)modifiedColor.CGColor];
             _highlightLayer.locations = @[@0, @1];
         } else {
             _highlightLayer.colors = @[(id)self.highlightShineColor.CGColor,
-                                       (id)((UIColor *)[self.topColor performSelector:colorAdjustment]).CGColor,
-                                       (id)((UIColor *)[self.bottomColor performSelector:colorAdjustment]).CGColor,
+                                       (id)(darkerColorNeeded ? [self.topColor darkerColor] : [self.topColor lighterColor]).CGColor,
+                                       (id)(darkerColorNeeded ? [self.bottomColor darkerColor] : [self.bottomColor lighterColor]).CGColor,
                                        (id)self.highlightShineColor.CGColor];
             _highlightLayer.locations = @[@0.0f, @0.05f, @0.95f, @1.0f];
         }
