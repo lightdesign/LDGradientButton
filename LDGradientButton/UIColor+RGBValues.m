@@ -41,7 +41,7 @@
 - (UIColor *)lighterColor {
     if ([self isEqual:[UIColor whiteColor]]) return [UIColor colorWithWhite:0.99 alpha:1.0];
     if ([self isEqual:[UIColor blackColor]]) return [UIColor colorWithWhite:0.01 alpha:1.0];
-    float hue, saturation, brightness, alpha;
+    CGFloat hue, saturation, brightness, alpha;
     if ([self getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha])
         return [UIColor colorWithHue:hue
                           saturation:saturation
@@ -53,7 +53,7 @@
 - (UIColor *)darkerColor {
     if ([self isEqual:[UIColor whiteColor]]) return [UIColor colorWithWhite:0.99 alpha:1.0];
     if ([self isEqual:[UIColor blackColor]]) return [UIColor colorWithWhite:0.01 alpha:1.0];
-    float hue, saturation, brightness, alpha;
+    CGFloat hue, saturation, brightness, alpha;
     if ([self getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha])
         return [UIColor colorWithHue:hue
                           saturation:saturation
